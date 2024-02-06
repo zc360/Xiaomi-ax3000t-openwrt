@@ -92,7 +92,7 @@
 # 刷入教程
 ## 一、软件准备
 
-### 1. 所需设备：一台电脑；一台小米AX3000T路由器/小米6500PRO路由器。
+### 1. 所需设备：一台电脑；一台小米AX3000T路由器。
 
 ### 2. 所需软件：MobaXterm或其他终端软件，cmd。
 
@@ -141,7 +141,7 @@ curl -X POST http://192.168.31.1/cgi-bin/luci/;stok=token/api/misystem/arn_switc
 curl -X POST http://192.168.31.1/cgi-bin/luci/;stok=token/api/misystem/arn_switch -d "open=1&model=1&level=%0A%2Fetc%2Finit.d%2Fdropbear%20start%0A"
     其中，将stok=token中的token替换成路由器的stok。
 
-通过MobaXterm连接路由器的ssh，进行后面的步骤。
+通过MobaXterm连接路由器的ssh（ip：192.168.31.1），进行后面的步骤。
 
 ## 三,刷入uboot（uboot固件：https://wwk.lanzouo.com/iL71O1nk1p3e）
 
@@ -152,4 +152,4 @@ curl -X POST http://192.168.31.1/cgi-bin/luci/;stok=token/api/misystem/arn_switc
 
 ### 3.路由器断电后，用针按住 reset 不放，再接上电源，等待 10s 左右松开，就能进入 uboot。电脑用网线和 ax3000t 的网口1连接，电脑在网络设置里将以太网设置为静态。IP地址：192.168.1.2，子网掩码：255.255.255.0，浏览器打开192.168.1.1访问uboot后台。
 
-### 4.刷入固件，如果失败或设备进不了系统就再刷一次，这个要多试几次。
+### 4.进入uboot后台刷入固件，如果失败或设备进不了系统就再刷一次，这个要多试几次。
