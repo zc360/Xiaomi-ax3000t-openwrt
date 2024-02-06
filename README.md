@@ -143,7 +143,7 @@ curl -X POST http://192.168.31.1/cgi-bin/luci/;stok=token/api/misystem/arn_switc
 
 通过MobaXterm连接路由器的ssh，进行后面的步骤。
 
-## 三,刷入uboot
+## 三,刷入uboot（uboot固件：https://wwk.lanzouo.com/iL71O1nk1p3e）
 
 ### 1.用终端软件将uboot文件上传到路由器的/tmp文件夹
 
