@@ -38,7 +38,7 @@
 
 自定义固件配置，将config文件上传到仓库里
 <details>
-<summary><b>&nbsp;查看任何生成config文件</b></summary>
+<summary><b>&nbsp;查看如何生成config文件</b></summary>
 
 1. 首先装好 Linux 系统，推荐 Debian 11 或 Ubuntu LTS
 
