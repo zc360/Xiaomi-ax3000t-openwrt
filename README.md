@@ -102,8 +102,8 @@
 
 例如，管理界面地址为：
 
-`http://192.168.31.1/cgi-bin/luci/;stok=030b24d39b1a4a549aa12dac23c52313/web/home#router
-    则stok=030b24d39b1a4a549aa12dac23c52313`，也即stok为`030b24d39b1a4a549aa12dac23c52313`。
+`http://192.168.31.1/cgi-bin/luci/;stok=030b24d39b1a4a549aa12dac23c52313/web/home#router`
+    则`stok=030b24d39b1a4a549aa12dac23c52313`，也即stok为`030b24d39b1a4a549aa12dac23c52313`。
 
 注：每次路由器重启，stok值都会改变。
 
