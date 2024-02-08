@@ -142,7 +142,7 @@
 
 其中，将`stok=token`中的`token`替换成路由器的`stok`。
 
-### 6.通过MobaXterm连接路由器的ssh（ip：`192.168.31.1`），进行后面的步骤。
+### 6.通过MobaXterm连接路由器的ssh，ip： `192.168.31.1` ，进行后面的步骤。
 
 ## 三,刷入uboot [uboot固件下载](https://wwk.lanzouo.com/iL71O1nk1p3e)
 
