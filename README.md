@@ -143,9 +143,9 @@
 
 ## 三,刷入uboot [uboot固件下载](https://wwk.lanzouo.com/iL71O1nk1p3e)
 
-### 1.用终端软件将uboot文件上传到路由器的/tmp文件夹
+### 1.用终端软件将uboot文件上传到路由器的`/tmp`文件夹
 
-### 2.输入 `cd /tmp` 命令进入 /tmp 目录。
+### 2.输入`cd /tmp`命令进入`/tmp`目录。
 
 ### 3.输入`mtd write mt7981_xiaomi_ax3000t-u-boot.fip FIP`命令以进行刷机操作。
 
