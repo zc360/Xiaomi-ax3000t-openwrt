@@ -105,7 +105,7 @@
 `http://192.168.31.1/cgi-bin/luci/;stok=030b24d39b1a4a549aa12dac23c52313/web/home#router`
     则`stok=030b24d39b1a4a549aa12dac23c52313`，也即stok为`030b24d39b1a4a549aa12dac23c52313`。
 
-注：每次路由器重启，stok值都会改变。
+### 注：每次路由器重启，stok值都会改变。
 
 
 ## 二、获取ssh权限
@@ -139,7 +139,7 @@
 
 其中，将`stok=token`中的`token`替换成路由器的`stok`。
 
-### 5.通过MobaXterm连接路由器的ssh（ip：`192.168.31.1`），进行后面的步骤。
+### 6.通过MobaXterm连接路由器的ssh（ip：`192.168.31.1`），进行后面的步骤。
 
 ## 三,刷入uboot [uboot固件下载](https://wwk.lanzouo.com/iL71O1nk1p3e)
 
