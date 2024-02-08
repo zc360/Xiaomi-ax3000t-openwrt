@@ -156,4 +156,4 @@
 
 ### 5.进入uboot后台刷入固件，如果失败或设备进不了系统就再刷一次，这个要多试几次,我也刷了好几次才成功。
 
-# 感谢[P3TERX大佬](https://github.com/P3TERX/Actions-OpenWrt)和[haiibo大佬](https://github.com/haiibo/OpenWrt)的源码
+# 感谢[P3TERX](https://github.com/P3TERX/Actions-OpenWrt)和[haiibo](https://github.com/haiibo/OpenWrt)的源码
