@@ -142,11 +142,11 @@
 
 其中，将`stok=token`中的`token`替换成路由器的`stok`。
 
-### 6.通过MobaXterm连接路由器的ssh，ip： `192.168.31.1` ，进行后面的步骤。
+### 6.通过MobaXterm连接路由器的ssh,ip:`192.168.31.1`
 
 ## 三,刷入uboot [uboot固件下载](https://wwk.lanzouo.com/iL71O1nk1p3e)
 
-### 1.用终端软件将uboot文件上传到路由器的`/tmp`文件夹
+### 1.用MobaXterm将uboot文件上传到路由器的`/tmp`文件夹
 
 ### 2.输入`cd /tmp`命令进入`/tmp`目录。
 
