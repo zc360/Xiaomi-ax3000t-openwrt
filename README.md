@@ -81,6 +81,7 @@
    **如果看不懂编译界面可以参考 YouTube 视频：[软路由固件 OpenWrt 编译界面设置](https://www.youtube.com/watch?v=jEE_J6-4E3Y&list=WL&index=7)**
 </details>
 
+
 ## 其他
 
 1.默认的登录ip是`192.168.1.1`
@@ -88,6 +89,7 @@
 2.默认登录密码是`password`
 
 3.不能使用ssh，会导致编译失败！！！
+
 
 # 刷入教程
 ## 一、软件准备
@@ -141,22 +143,24 @@
 
 ### 6.通过MobaXterm连接路由器的ssh,ip:`192.168.31.1`
 
+
 ## 三,刷入uboot [uboot固件下载](https://wwk.lanzouo.com/isDQD24feyxi)
 
-#### 1.用MobaXterm将uboot文件上传到路由器的`/tmp`文件夹
+1.用MobaXterm将uboot文件上传到路由器的`/tmp`文件夹
 
-#### 2.输入`cd /tmp`命令进入/tmp目录。
+2.输入`cd /tmp`命令进入`/tmp`目录。
 
-#### 3.输入`mtd write mt7981_xiaomi_ax3000t-u-boot.bin FIP`命令以进行刷机操作。
+3.输入`mtd write mt7981_xiaomi_ax3000t-u-boot.bin FIP`命令以进行刷机操作。
 
-### 4.路由器断电后，用针按住 reset 不放，再接上电源，等待 10s 左右松开，电脑用网线和路由器的网口1连接，电脑在网络设置里将以太网ipv4设置为静态。IP地址：`192.168.1.5`，子网掩码：`255.255.255.0`，浏览器打开`192.168.1.1`访问uboot后台。
+4.路由器断电后，用针按住 reset 不放，再接上电源，等待 10s 左右松开，电脑用网线和路由器的网口1连接，电脑在网络设置里将以太网ipv4设置为静态。IP地址：`192.168.1.5`，子网掩码：`255.255.255.0`，浏览器打开`192.168.1.1`访问uboot后台。
 
-### 5.进入uboot后台刷入固件，刷openwrt的话分区就选qwrt,如果失败或设备进不了系统就再刷一次，这个可能要多试几次,我也刷了几次才成功。
+5.进入uboot后台刷入固件，刷openwrt的话分区就选`qwrt`,如果失败或设备进不了系统就再刷一次，这个可能要多试几次,我也刷了几次才成功。
+
 
 ## 刷回小米官方固件
 
-### 1.同样的方法打开uboot后台
+1.同样的方法打开uboot后台
 
-### 2.刷入小米官方固件[小米官方固件下载](https://wwk.lanzouo.com/i8ctn24fdqsj)，分区选择default刷入即可（刷入后会重启多次）
+2.刷入小米官方固件[小米官方固件下载](https://wwk.lanzouo.com/i8ctn24fdqsj)，分区选择`default`刷入即可（刷入后会重启多次）
 
 # 感谢[P3TERX](https://github.com/P3TERX/Actions-OpenWrt)和[haiibo](https://github.com/haiibo/OpenWrt)的源码
