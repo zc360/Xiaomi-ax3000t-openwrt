@@ -94,13 +94,13 @@
 # 刷入教程
 ## 一、软件准备
 
-### 1. 所需设备：一台电脑；一台小米AX3000T路由器。
+1. 所需设备：一台电脑；一台小米AX3000T路由器。
 
-### 2. 所需软件：MobaXterm或其他终端软件，cmd。
+2. 所需软件：MobaXterm或其他终端软件，cmd。
 
-### 3. 初始密码计算：`https://miwifi.dev/ssh`
+3. 初始密码计算：`https://miwifi.dev/ssh`
 
-### 4. 路由器的stok：打开路由器的web端管理界面，输入管理员密码，从上方地址栏即可获得stok。
+4. 路由器的stok：打开路由器的web端管理界面，输入管理员密码，从上方地址栏即可获得stok。
 
 例如，管理界面地址为：
 
@@ -112,9 +112,9 @@
 
 ## 二、获取ssh权限
 
-### 1. 打开cmd。
+1. 打开cmd。
 
-### 2. 在cmd中输入指令1：
+2. 在cmd中输入指令1：
 
 `curl -X POST http://192.168.31.1/cgi-bin/luci/;stok=token/api/misystem/arn_switch -d "open=1&model=1&level=%0Anvram%20set%20ssh_en%3D1%0A"`
 
@@ -124,24 +124,24 @@
 
 `curl -X POST http://192.168.31.1/cgi-bin/luci/;stok=030b24d39b1a4a549aa12dac23c52313/api/misystem/arn_switch -d "open=1&model=1&level=%0Anvram%20set%20ssh_en%3D1%0A"`
 
-### 3. 在cmd中输入指令2：
+3. 在cmd中输入指令2：
 
 `curl -X POST http://192.168.31.1/cgi-bin/luci/;stok=token/api/misystem/arn_switch -d "open=1&model=1&level=%0Anvram%20commit%0A"`
     其中，将 stok=token 中的 token 替换成路由器的 stok。
 
-### 4. 在cmd中输入指令3：
+4. 在cmd中输入指令3：
 
 `curl -X POST http://192.168.31.1/cgi-bin/luci/;stok=token/api/misystem/arn_switch -d "open=1&model=1&level=%0Ased%20-i%20's%2Fchannel%3D.*%2Fchannel%3D%22debug%22%2Fg'%20%2Fetc%2Finit.d%2Fdropbear%0A"`
 
 其中，将 stok=token 中的 token 替换成路由器的 stok 。
 
-### 5. 在cmd中输入指令4：
+5. 在cmd中输入指令4：
 
 `curl -X POST http://192.168.31.1/cgi-bin/luci/;stok=token/api/misystem/arn_switch -d "open=1&model=1&level=%0A%2Fetc%2Finit.d%2Fdropbear%20start%0A"`
 
 其中，将 stok=token 中的 token 替换成路由器的 stok 。
 
-### 6.通过MobaXterm连接路由器的ssh,ip:`192.168.31.1`
+6.通过MobaXterm连接路由器的ssh,ip:`192.168.31.1`
 
 
 ## 三,刷入uboot [uboot固件下载](https://wwk.lanzouo.com/isDQD24feyxi)
