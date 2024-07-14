@@ -1,14 +1,14 @@
 # 适用于小米ax3000t的openwrt固件及刷入教程和刷回官方教程
 
-**请看README的时候不要使用浏览器的网页翻译，会导致README的排版错误**
+**请看README的时候不要使用浏览器的网页翻译，会导致README的排版错误。**
 
 ## 固件修改说明
 
 ### 默认固件配置修改（相对lede默认配置而言）
 
-1.添加ipv6支持 
+1.添加ipv6支持
 
-2.添加了argon主题配置插件 `luci-app-argon-config` 
+2.添加了argon主题配置插件 `luci-app-argon-config`
 
 3.添加了zram内存压缩插件（要想正常使用请刷好后手动在软件包里下载 `zram-swap` ）
 
