@@ -26,6 +26,9 @@
 
 ### 使用方法二
 
+<details>
+<summary><b>&nbsp;查看如何使用</b></summary>
+
 1：先fork这个仓库
 
 2：到自己fork的仓库后的点击`Actions`
