@@ -145,7 +145,7 @@
 
 #### 1.用MobaXterm将uboot文件上传到路由器的`/tmp`文件夹
 
-#### 2.输入`cd /tmp`命令进入`/tmp`目录。
+#### 2.输入`cd /tmp`命令进入/tmp目录。
 
 #### 3.输入`mtd write mt7981_xiaomi_ax3000t-u-boot.fip FIP`命令以进行刷机操作。
 
