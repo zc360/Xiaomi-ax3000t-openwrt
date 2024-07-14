@@ -101,14 +101,14 @@
 
 3. 初始密码计算：`https://miwifi.dev/ssh`
 
-4. 路由器的stok：打开路由器的web端管理界面，输入管理员密码，从上方地址栏即可获得stok。
+4. 路由器的`stok`：打开路由器的web端管理界面，输入管理员密码，从上方地址栏即可获得`stok`。
 
 例如，管理界面地址为：
 
 `http://192.168.31.1/cgi-bin/luci/;stok=030b24d39b1a4a549aa12dac23c52313/web/home#router`
-    则`stok=030b24d39b1a4a549aa12dac23c52313`，也即stok为`030b24d39b1a4a549aa12dac23c52313`。
+    则`stok=030b24d39b1a4a549aa12dac23c52313`，也即`stok`为`030b24d39b1a4a549aa12dac23c52313`。
 
-### 注：每次路由器重启，stok值都会改变。
+### 注：每次路由器重启，`stok`值都会改变。
 
 
 ## 二：获取ssh权限
