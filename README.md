@@ -26,6 +26,10 @@
 
 ### 使用方法二
 
+自己云编译
+<details>
+<summary><b>&nbsp;查看如何生成config文件</b></summary>
+
 1：先fork这个仓库
 
 2：到自己fork的仓库后的点击 `Actions`
@@ -35,6 +39,7 @@
 4：等待编译完成后再次进入 `Actions` 点击刚刚完成的一次编译
 
 5：点击编译完成的固件即可下载
+</details>
 
 ### 使用方法三
 
@@ -168,3 +173,6 @@
 2.刷入小米官方固件[小米官方固件下载](https://wwk.lanzouo.com/i8ctn24fdqsj)，分区选择 `default` 刷入即可（刷入后会重启多次）
 
 # 感谢[P3TERX](https://github.com/P3TERX/Actions-OpenWrt)和[haiibo](https://github.com/haiibo/OpenWrt)的源码
+
+
+
