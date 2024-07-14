@@ -88,11 +88,12 @@
 
 2.默认登录密码是`password`
 
-3.不能使用ssh，会导致编译失败！！！
+3.云编译的时候不能使用ssh，会导致编译失败！！！
 
 
 # 刷入教程
-## 一、软件准备
+
+## 一：软件准备
 
 1. 所需设备：一台电脑；一台小米AX3000T路由器。
 
@@ -110,7 +111,7 @@
 ### 注：每次路由器重启，stok值都会改变。
 
 
-## 二、获取ssh权限
+## 二：获取ssh权限
 
 1. 打开cmd。
 
@@ -118,33 +119,33 @@
 
 `curl -X POST http://192.168.31.1/cgi-bin/luci/;stok=token/api/misystem/arn_switch -d "open=1&model=1&level=%0Anvram%20set%20ssh_en%3D1%0A"`
 
-其中，将 stok=token 中的 token 替换成路由器的 stok 。
+其中，将`stok=token`中的`token`替换成路由器的`stok`。
 
-例如，我的stok为`030b24d39b1a4a549aa12dac23c52313`，则应输入到cmd的指令为：
+例如，我的`stok`为`030b24d39b1a4a549aa12dac23c52313`，则应输入到cmd的指令为：
 
 `curl -X POST http://192.168.31.1/cgi-bin/luci/;stok=030b24d39b1a4a549aa12dac23c52313/api/misystem/arn_switch -d "open=1&model=1&level=%0Anvram%20set%20ssh_en%3D1%0A"`
 
 3. 在cmd中输入指令2：
 
 `curl -X POST http://192.168.31.1/cgi-bin/luci/;stok=token/api/misystem/arn_switch -d "open=1&model=1&level=%0Anvram%20commit%0A"`
-    其中，将 stok=token 中的 token 替换成路由器的 stok。
+    其中，将`stok=token`中的`token`替换成路由器的`stok`。
 
 4. 在cmd中输入指令3：
 
 `curl -X POST http://192.168.31.1/cgi-bin/luci/;stok=token/api/misystem/arn_switch -d "open=1&model=1&level=%0Ased%20-i%20's%2Fchannel%3D.*%2Fchannel%3D%22debug%22%2Fg'%20%2Fetc%2Finit.d%2Fdropbear%0A"`
 
-其中，将 stok=token 中的 token 替换成路由器的 stok 。
+其中，将`stok=token`中的`token`替换成路由器的`stok`。
 
 5. 在cmd中输入指令4：
 
 `curl -X POST http://192.168.31.1/cgi-bin/luci/;stok=token/api/misystem/arn_switch -d "open=1&model=1&level=%0A%2Fetc%2Finit.d%2Fdropbear%20start%0A"`
 
-其中，将 stok=token 中的 token 替换成路由器的 stok 。
+其中，将`stok=token`中的`token`替换成路由器的`stok`。
 
-6.通过MobaXterm连接路由器的ssh,ip:`192.168.31.1`
+6.通过MobaXterm或其他ssh软件连接路由器的ssh，ip:`192.168.31.1`
 
 
-## 三,刷入uboot [uboot固件下载](https://wwk.lanzouo.com/isDQD24feyxi)
+## 三：刷入uboot [uboot固件下载](https://wwk.lanzouo.com/isDQD24feyxi)
 
 1.用MobaXterm将uboot文件上传到路由器的`/tmp`文件夹
 
