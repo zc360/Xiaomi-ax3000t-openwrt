@@ -25,6 +25,8 @@
 直接到Releases中下载已经编译好的固件
 
 ### 使用方法二
+
+自己云编译
 <details>
 <summary><b>&nbsp;查看如何使用</b></summary>
 
