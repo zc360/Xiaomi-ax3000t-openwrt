@@ -24,7 +24,7 @@
 
 ### 使用方法一
 
-直接到 `Releases` 中下载已经编译好的固件
+直接到[Releases](https://github.com/zc360/Xiaomi-ax3000t-openwrt/releases)中下载已经编译好的固件，刷squashfs-sysupgrade格式的就可以，不行就先刷initramfs-kernel然后再到后台去升级为squashfs-sysupgrade格式的固件。
 
 ### 使用方法二
 
@@ -165,7 +165,7 @@
 4.路由器断电后，用针按住 reset 不放，再接上电源，等待 10s 左右松开，电脑用网线和路由器的网口1连接，电脑在网络设置里将以太网ipv4设置为静态。IP地址： `192.168.1.5` ，子网掩码： 
  `255.255.255.0` ，浏览器打开 `192.168.1.1` 访问uboot后台。
 
-5.进入uboot后台刷入固件，刷openwrt的话分区就选 `qwrt` ,如果失败或设备进不了系统就再刷一次，这个可能要多试几次,我也刷了几次才成功。
+5.进入uboot后台刷入固件，刷openwrt的话分区就选 `qwrt` ,刷squashfs-sysupgrade格式的就可以，不行就先刷initramfs-kernel然后再到后台去升级为squashfs-sysupgrade格式的固件，如果失败或设备进不了系统就再刷一次，这个可能要多试几次,我也刷了几次才成功。
 
 
 # 刷回小米官方固件
