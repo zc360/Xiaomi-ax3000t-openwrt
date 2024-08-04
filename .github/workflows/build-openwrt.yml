@@ -98,12 +98,12 @@ jobs:
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P1_SH
 
-    - name: 添加ddms-go源码
+    - name: Install ddns-go
       run: |
         cd openwrt
         git clone https://github.com/sirpdboy/luci-app-ddns-go.git package/ddns-go
 
-    - name: 添加argon源码
+    - name: Install argon
       run: |
         cd openwrt/package/lean
         rm -rf luci-theme-argon
