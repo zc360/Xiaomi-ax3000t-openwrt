@@ -1,6 +1,6 @@
 # 适用于小米ax3000t的云编译openwrt固件及刷入教程和刷回官方教程
 
-## 也可以通过修改配置文件自定义固件
+**可以通过修改config文件自定义固件**
 
 理论上是可以编译出任何支持的机型和任何配置的固件的
 
@@ -12,21 +12,21 @@
 
 **关于使用uboot刷入openwrt的说明：7月8日及之前版本的固件刷入时uboot选择第三项qwrt，8月4日及以后版本的固件刷入时uboot选择第二项，7月8日及以前的版本的固件升级8月4日及以后版本的固件时请先在`备份/升级`选项中备份配置文件，然后再到uboot里去升级，选择第二个选项，升级后再到`备份/升级`里恢复之前的配置文件。**
 
-## 固件修改说明（仓库里的配置文件）
+## 修改说明
 
-### 默认固件配置修改（相对lede默认配置而言）
+### 相对lede默认配置而言修改的部分（仓库里适用与小米ax3000t的config文件）
 
 1.添加ipv6支持
 
-2.添加了argon主题配置插件 `luci-app-argon-config`
+2.添加了Argon主题配置插件 `luci-app-argon-config`
 
-3.将主题改为`argon`（如果固件7月8日及之前版本请手动到argon的GitHub仓库下载安装）
+3.将主题改为`Argon`（如果固件是7月8日及之前版本请手动到[Argon的GitHub仓库下载并安装](https://github.com/jerrykuku/luci-theme-argon/releases)）
 
-4.添加了`zram`内存压缩插件（如果是7月8日及之前的版本请手动安装`zram-swap`插件才能正常允许）
+4.添加了`zram`内存压缩插件（如果固件是7月8日及之前的版本请手动到软件包里安装`zram-swap`插件才能正常运行）
 
-5.删去了默认的ddns，添加了ddns-go（8月4日版本及以后才有）
+5.删去了默认的Ddns，添加了[Ddns-go](https://github.com/sirpdboy/luci-app-ddns-go)（8月4日版本及以后才有）
 
-### 编译工作流文件修改（编译完成会报错出现红×，这不影响，固件会正常编译出来）
+### 编译工作流文件修改
 
 1.修复原版云编译 `set-output` 错误
 
@@ -34,15 +34,20 @@
 
 3.添加了检测服务器配置的一步
 
-## 使用方法
+4.添加了Ddnsgo和新版Argon主题的源码（修改工作流文件让编译时把源码git下来）
 
-### 使用方法一
+**编译完成会报错出现红×，这不影响，固件会正常编译出来**
+
+# 使用方法
+
+## 使用方法一（如果设备是小米ax3000t）
 
 直接到[Releases](https://github.com/zc360/Xiaomi-ax3000t-openwrt/releases)中下载已经编译好的固件，刷squashfs-sysupgrade格式的就可以，不行就先刷initramfs-kernel然后再到后台去升级为squashfs-sysupgrade格式的固件。
 
-### 使用方法二
+## 使用方法二（不修改config文件的话编译的是ax3000t的固件）
 
 自己云编译
+
 <details>
 <summary><b>&nbsp;查看如何使用</b></summary>
 
@@ -57,9 +62,11 @@
 5：点击编译完成的固件即可下载
 </details>
 
-### 使用方法三
+## 修复配置文件（config文件）说明
 
-自定义固件配置，将config文件上传到仓库里
+自定义固件配置，将config文件的内容复制到仓库里的config文件里
+
+生成config文件详细教程请到[lede的仓库查看](https://github.com/coolsnowwolf/lede)
 
 <details>
 <summary><b>&nbsp;查看如何生成config文件</b></summary>
@@ -89,24 +96,22 @@
    ./scripts/feeds install -a
    ```
 
-4. 复制 diy-script.sh 文件内所有内容到命令行，添加自定义插件和自定义设置
-
-5. 命令行输入 `make menuconfig` 选择配置，选好配置后导出差异部分到 seed.config 文件
+4. 命令行输入 `make menuconfig` 选择配置，选好配置后保存，文件名自定义为xxx.config（xxx是自定义的）
 
    ```bash
    make defconfig
    ./scripts/diffconfig.sh > seed.config
    ```
 
-7. 命令行输入 `cat seed.config` 查看这个文件，也可以用文本编辑器打开
+5. 命令行输入 `cat xxx.config` 查看这个文件，也可以用文本编辑器打开
 
-8. 复制 seed.config 文件内所有内容到 configs 目录对应文件中覆盖就可以了
+6. 复制 xxx.config 文件内所有内容到 configs 目录对应文件中覆盖就可以了
 
    **如果看不懂编译界面可以参考 YouTube 视频：[软路由固件 OpenWrt 编译界面设置](https://www.youtube.com/watch?v=jEE_J6-4E3Y&list=WL&index=7)**
 </details>
 
 
-## 其他
+# 其他重要部分
 
 1.默认的登录ip是 `192.168.1.1`
 
