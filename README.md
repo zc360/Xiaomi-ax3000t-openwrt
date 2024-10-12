@@ -114,9 +114,9 @@
 
 3.云编译的时候不能使用 `ssh` ，会导致编译失败！！！
 
-# [小米ax3000t解锁ssh以及刷入教程](https://github.com/zc360/Xiaomi-ax3000t-openwrt/blob/main/Flash-document)
+# [小米ax3000t解锁ssh以及刷入教程](https://github.com/zc360/Xiaomi-ax3000t-openwrt/blob/main/Flash-document.md)
 
-# [刷回小米官方固件](https://github.com/zc360/Xiaomi-ax3000t-openwrt/blob/main/BackXiaomi)
+# [刷回小米官方固件](https://github.com/zc360/Xiaomi-ax3000t-openwrt/blob/main/BackXiaomi.md)
 
 # 感谢[P3TERX](https://github.com/P3TERX/Actions-OpenWrt)和[haiibo](https://github.com/haiibo/OpenWrt)的源码
 
