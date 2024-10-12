@@ -60,6 +60,7 @@
 ### 使用方法三
 
 自定义固件配置，将config文件上传到仓库里
+
 <details>
 <summary><b>&nbsp;查看如何生成config文件</b></summary>
 
@@ -113,12 +114,9 @@
 
 3.云编译的时候不能使用 `ssh` ，会导致编译失败！！！
 
+# [小米ax3000t解锁ssh以及刷入教程](https://github.com/zc360/Xiaomi-ax3000t-openwrt/blob/main/Flash-document)
 
-# 刷回小米官方固件
-
-1.同样的方法打开uboot后台
-
-2.刷入小米官方固件[小米官方固件下载](https://wwk.lanzouo.com/i8ctn24fdqsj)，分区选择 `default` 刷入即可（刷入后会重启多次）
+# [刷回小米官方固件](https://github.com/zc360/Xiaomi-ax3000t-openwrt/blob/main/BackXiaomi)
 
 # 感谢[P3TERX](https://github.com/P3TERX/Actions-OpenWrt)和[haiibo](https://github.com/haiibo/OpenWrt)的源码
 
