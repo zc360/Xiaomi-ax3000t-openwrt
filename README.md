@@ -123,7 +123,7 @@
 
 # [刷回小米官方固件](https://github.com/zc360/Xiaomi-ax3000t-openwrt/blob/main/BackXiaomi.md)
 
-# 感谢[P3TERX](https://github.com/P3TERX/Actions-OpenWrt)和[haiibo](https://github.com/haiibo/OpenWrt)的源码
+# 感谢[P3TERX](https://github.com/P3TERX/Actions-OpenWrt)和[haiibo](https://github.com/haiibo/OpenWrt)以及[dzikaros](https://github.com/dzikaros/ActionsBuildOpenWRT)的源码提供支持
 
 
 
