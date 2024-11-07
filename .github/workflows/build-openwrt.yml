@@ -30,7 +30,7 @@ env:
   UPLOAD_FIRMWARE: true  # 是否上传固件
   UPLOAD_COWTRANSFER: false  # 是否上传到 cowtransfer
   UPLOAD_WETRANSFER: false  # 是否上传到 WeTransfer
-  UPLOAD_RELEASE: false  # 是否发布 release
+  UPLOAD_RELEASE: true  # 是否发布 release
   TZ: Asia/Shanghai  # 时区设置
 
 jobs:
@@ -71,18 +71,20 @@ jobs:
     - name: Checkout  # 检出代码
       uses: actions/checkout@main
 
-    - name: Initialization environment  # 初始化环境
-      env:
-        DEBIAN_FRONTEND: noninteractive  # 禁用交互式提示
-      run: |
-        sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc
-        sudo -E apt-get -qq update
-        sudo -E apt-get -qq install $(curl -fsSL git.io/depends-ubuntu-2004)
-        sudo -E apt-get -qq autoremove --purge
-        sudo -E apt-get -qq clean
-        sudo timedatectl set-timezone "$TZ"
-        sudo mkdir -p /workdir
-        sudo chown $USER:$GROUPS /workdir
+    - name: Initialization environment
+  env:
+    DEBIAN_FRONTEND: noninteractive
+  run: |
+    docker rmi `docker images -q`
+    sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc /etc/mysql /etc/php
+    sudo -E apt-get -y purge azure-cli* docker* ghc* zulu* hhvm* llvm* firefox* google* dotnet* aspnetcore* powershell* openjdk* adoptopenjdk* mysql* php* mongodb* moby* snap* || true
+    sudo -E apt-get -qq update
+    sudo -E apt-get -qq install libfuse-dev $(curl -fsSL git.io/depends-ubuntu-2204)
+    sudo -E apt-get -qq autoremove --purge
+    sudo -E apt-get -qq clean
+    sudo timedatectl set-timezone "$TZ"
+    sudo mkdir -p /workdir
+    sudo chown $USER:$GROUPS /workdir
 
     - name: Clone source code  # 克隆源代码
       working-directory: /workdir
@@ -220,12 +222,4 @@ jobs:
       with:
         retain_days: 1
         keep_minimum_runs: 3
-
-    - name: Remove old Releases  # 删除旧的发布版本
-      uses: dev-drprasad/delete-older-releases@v0.1.0
-      if: env.UPLOAD_RELEASE == 'true' && !cancelled()
-      with:
-        keep_latest: 3
-        delete_tags: true
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
