@@ -18,11 +18,11 @@
 
 1.添加ipv6支持
 
-2.添加了Argon主题配置插件 `luci-app-argon-config`
+2.添加了Argon主题配置插件 `luci-app-argon-config`（2024/11/17及以后版本固件没有）
 
 3.将主题改为`Argon`（如果固件是7月8日及之前版本请手动到[Argon的GitHub仓库下载并安装](https://github.com/jerrykuku/luci-theme-argon/releases)）
 
-4.添加了`zram`内存压缩插件（如果固件是7月8日及之前的版本请手动到软件包里安装`zram-swap`插件才能正常运行）
+4.添加了`zram`内存压缩插件（如果固件是7月8日及之前的版本请手动到软件包里安装`zram-swap`插件才能正常运行）（2024/11/17及以后版本固件没有）
 
 5.删去了默认的Ddns，添加了[Ddns-go](https://github.com/sirpdboy/luci-app-ddns-go)（8月4日版本及以后才有）
 
@@ -34,7 +34,7 @@
 
 3.添加了检测服务器配置的一步
 
-4.添加了Ddnsgo和新版Argon主题的源码（修改工作流文件让编译时把源码git下来）
+4.添加了Ddnsgo和新版Argon主题的源码
 
 **编译完成会报错出现红×，这不影响，固件会正常编译出来**
 
