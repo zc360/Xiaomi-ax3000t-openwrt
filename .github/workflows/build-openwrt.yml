@@ -136,6 +136,12 @@ jobs:
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P1_SH
 
+    - name: Update feeds  # 更新 feeds
+      run: cd openwrt && ./scripts/feeds update -a
+
+    - name: Install feeds  # 安装 feeds
+      run: cd openwrt && ./scripts/feeds install -a
+
     - name: Install ddns-go
       run: |
         cd openwrt
@@ -145,13 +151,7 @@ jobs:
       run: |
         cd openwrt/package/lean
         rm -rf luci-theme-argon
-        git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git luci-theme-argon
-
-    - name: Update feeds  # 更新 feeds
-      run: cd openwrt && ./scripts/feeds update -a
-
-    - name: Install feeds  # 安装 feeds
-      run: cd openwrt && ./scripts/feeds install -a
+        git clone -b master https://github.com/jerrykuku/luci-theme-argon.git luci-theme-argon
 
     - name: Load custom configuration  # 加载自定义配置
       run: |
