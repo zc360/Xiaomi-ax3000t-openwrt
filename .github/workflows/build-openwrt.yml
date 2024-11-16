@@ -30,7 +30,7 @@ env:
   UPLOAD_FIRMWARE: true  # 是否上传固件
   UPLOAD_COWTRANSFER: false  # 是否上传到 cowtransfer
   UPLOAD_WETRANSFER: false  # 是否上传到 WeTransfer
-  UPLOAD_RELEASE: true  # 是否发布 release
+  UPLOAD_RELEASE: false  # 是否发布 release
   TZ: Asia/Shanghai  # 时区设置
 
 jobs:
