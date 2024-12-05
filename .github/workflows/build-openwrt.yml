@@ -1,13 +1,3 @@
-#
-# 版权 (c) 2019-2020 P3TERX <https://p3terx.com>
-#
-# 这是一个自由软件，遵循 MIT 许可证。
-# 有关更多信息，请参见 /LICENSE。
-#
-# https://github.com/P3TERX/Actions-OpenWrt
-# 描述：使用 GitHub Actions 构建 OpenWrt
-#
-
 name: Build OpenWrt  # 工作流名称：构建 OpenWrt
 
 on:
