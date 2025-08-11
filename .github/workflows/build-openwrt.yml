@@ -135,6 +135,7 @@ jobs:
     - name: Install ddns-go
       run: |
         cd openwrt
+        rm -rf package/ddns-go
         git clone https://github.com/sirpdboy/luci-app-ddns-go.git package/ddns-go
 
     - name: Install argon
