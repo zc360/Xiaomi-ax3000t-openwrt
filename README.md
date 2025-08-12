@@ -28,6 +28,8 @@
 
 5.删去了默认的Ddns，添加了[Ddns-go](https://github.com/sirpdboy/luci-app-ddns-go)（8月4日版本及以后才有）
 
+6.没有ssrplus,使用passwall2（2025/08/12及之后版本）
+
 ### 编译工作流文件修改
 
 1.修复原版云编译 `set-output` 错误
