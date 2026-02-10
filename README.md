@@ -1,6 +1,8 @@
 # 适用于小米ax3000t的云编译openwrt固件及刷入教程和刷回官方教程
 
-## 警告：仅适用于ax3000t v1版本路由器，v2版刷此固件或我所提供的uboot可能会变砖！
+## 注意：目前云编译有问题无法正常编译成功，[Releases](https://github.com/zc360/Xiaomi-ax3000t-openwrt/releases)里的最新固件是我自己用Linux编译出的。
+
+## 注意：仅适用于ax3000t v1版本路由器，v2版刷此固件或我所提供的uboot可能会变砖！
 
 **可以通过修改config文件自定义固件**
 
