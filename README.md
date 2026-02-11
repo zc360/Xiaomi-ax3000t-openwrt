@@ -1,48 +1,50 @@
 # 适用于小米ax3000t的云编译openwrt固件及刷入教程和刷回官方教程
 
-## 注意：目前云编译有问题无法正常编译成功，[Releases](https://github.com/zc360/Xiaomi-ax3000t-openwrt/releases)里的最新固件是我自己用Linux编译出的。
+## 注意：[Releases](https://github.com/zc360/Xiaomi-ax3000t-openwrt/releases)里的固件可能仅适用于ax3000t v1版本路由器，v2版刷[Releases](https://github.com/zc360/Xiaomi-ax3000t-openwrt/releases)里的固件或我所提供的uboot可能会变砖！
 
-## 注意：仅适用于ax3000t v1版本路由器，v2版刷此固件或我所提供的uboot可能会变砖！
+**可以通过修改.config文件及diy-part1.sh文件自定义编译固件**
 
-**可以通过修改config文件自定义固件**
+此仓库是可以编译出任何支持的机型和任何自定义配置的固件
 
-理论上是可以编译出任何支持的机型和任何配置的固件的
+如果需要添加一些lede默认没有的插件可以通过修改工作流文件或编辑diy-part文件来实现，即通过修改云编译工作流文件或编辑diy-part文件来把需要的插件源码git到工作流源码中就可以编译出这些插件了
 
-如果需要添加一些lede默认没有的插件可以通过修改工作流文件来实现，既通过修改云编译工作流文件来把需要的插件源码git来就可以编译出这些插件了（比如新版的argon主题和ddns-go）
+**看README的时候请不要使用浏览器的网页翻译，会导致README的排版错误。**
 
-**请看README的时候不要使用浏览器的网页翻译，会导致README的排版错误。**
-
-**如果您使用的是发布在[Releases](https://github.com/zc360/Xiaomi-ax3000t-openwrt/releases)里的固件，那么应该是不会出现刷不上去和用不了等奇奇怪怪的问题的，如果您使用的是你您自己修改配置文件通过云编译出的固件我只能够确保固件能编译出来，而能不能正常刷入和使用是无法保证的。**
+**如果您使用的是发布在[Releases](https://github.com/zc360/Xiaomi-ax3000t-openwrt/releases)里的固件，且使用机型和我的机型一致那么应该是不会出现刷不上去和无法正常使用等奇奇怪怪的问题的**
 
 **关于使用uboot刷入openwrt的说明：7月8日及之前版本的固件刷入时uboot选择第三项qwrt，8月4日及以后版本的固件刷入时uboot选择第二项，7月8日及以前的版本的固件升级8月4日及以后版本的固件时请先在`备份/升级`选项中备份配置文件，然后再到uboot里去升级，选择第二个选项，升级后再到`备份/升级`里恢复之前的配置文件。**
 
 ## 修改说明
 
-### 相对lede默认配置而言修改的部分（仓库里适用与小米ax3000t的config文件）
+### 仓库里适用与小米ax3000t的config文件及[Releases](https://github.com/zc360/Xiaomi-ax3000t-openwrt/releases)里的固件相对lede默认ax3000t的配置而言修改的部分
 
 1.添加ipv6支持
 
 2.添加了Argon主题配置插件 `luci-app-argon-config`（2024/11/17及以后版本固件没有）
 
-3.将主题改为`Argon`（如果固件是7月8日及之前版本请手动到[Argon的GitHub仓库下载并安装](https://github.com/jerrykuku/luci-theme-argon/releases)）
+3.安装主题`Argon`（如果固件是7月8日及之前版本请手动到[Argon的GitHub仓库下载并安装](https://github.com/jerrykuku/luci-theme-argon/releases)）
 
-4.添加了`zram`内存压缩插件（如果固件是7月8日及之前的版本请手动到软件包里安装`zram-swap`插件才能正常运行）（2024/11/17及以后版本固件没有）
+4.添加了`zram`内存压缩插件（如果固件是2024/7/8及之前的版本请手动到软件包里安装`zram-swap`插件才能正常运行）（2024/11/17-2025/08/12版本没有zram）
 
-5.删去了默认的Ddns，添加了[Ddns-go](https://github.com/sirpdboy/luci-app-ddns-go)（8月4日版本及以后才有）
+5.删去了默认的Ddns，添加了[Ddns-go](https://github.com/sirpdboy/luci-app-ddns-go)（2024/8/4版本及以后有）
 
-6.没有ssrplus,使用passwall2（2025/08/12及之后版本）
+6.2025/08/12及之后版本没有ssrplus,使用passwall2
 
-### 编译工作流文件修改
+7.2025/08/12之前(不包括)版本使用ssrplus,没有passwall2
+
+### 工作流文件修改（相较于原仓库）
 
 1.修复原版云编译 `set-output` 错误
 
-2.删除不必要的文件防止出现磁盘空间不足的问题
+2.删除工作流环境中无需的文件防止出现磁盘空间不足的问题
 
 3.添加了检测服务器配置的一步
 
 4.添加了Ddnsgo和新版Argon主题的源码
 
-**编译完成会报错出现红×，这不影响，固件会正常编译出来**
+5.根据lede最新的教程优化了工作流文件
+
+**编译完成后可能会报错出现红×，这并不影响，固件会正常编译出来**
 
 # 使用方法
 
