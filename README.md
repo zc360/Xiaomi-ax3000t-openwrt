@@ -59,13 +59,13 @@
 <details>
 <summary><b>&nbsp;查看如何使用</b></summary>
 
-1：先fork这个仓库
+1：点击Use this template或fork这个仓库(推荐Use this template，fork在运行actions时可能有问题)
 
-2：到自己fork的仓库后的点击 `Actions`
+2：到自己复制的仓库后的进入 `Actions`
 
 3：点击 `Build OpenWrt` 下的 `Run workflow` 即可开始编译
 
-4：等待编译完成后再次进入 `Actions` 点击刚刚完成的一次编译
+4：等待编译完成后再次进入 `Actions` ，点击刚刚完成的一次编译
 
 5：点击编译完成的固件即可下载
 </details>
@@ -87,12 +87,12 @@
    sudo apt update -y
    sudo apt full-upgrade -y
    sudo apt install -y ack antlr3 asciidoc autoconf automake autopoint binutils bison build-essential \
-   bzip2 ccache cmake cpio curl device-tree-compiler fastjar flex gawk gettext gcc-multilib g++-multilib \
-   git gperf haveged help2man intltool libc6-dev-i386 libelf-dev libglib2.0-dev libgmp3-dev libltdl-dev \
-   libmpc-dev libmpfr-dev libncurses5-dev libncursesw5-dev libreadline-dev libssl-dev libtool lrzsz \
-   mkisofs msmtp nano ninja-build p7zip p7zip-full patch pkgconf python2.7 python3 python3-pyelftools \
-   libpython3-dev qemu-utils rsync scons squashfs-tools subversion swig texinfo uglifyjs upx-ucl unzip \
-   vim wget xmlto xxd zlib1g-dev
+   bzip2 ccache clang cmake cpio curl device-tree-compiler flex gawk gcc-multilib g++-multilib gettext \
+   genisoimage git gperf haveged help2man intltool libc6-dev-i386 libelf-dev libfuse-dev libglib2.0-dev \
+   libgmp3-dev libltdl-dev libmpc-dev libmpfr-dev libncurses5-dev libncursesw5-dev libpython3-dev \
+   libreadline-dev libssl-dev libtool llvm lrzsz libnsl-dev ninja-build p7zip p7zip-full patch pkgconf \
+   python3 python3-pyelftools python3-setuptools qemu-utils rsync scons squashfs-tools subversion \
+   swig texinfo uglifyjs upx-ucl unzip vim wget xmlto xxd zlib1g-dev
    ```
 
 3. 下载源代码，更新 feeds 并安装到本地
@@ -125,7 +125,7 @@
 
 2.默认登录密码是 `password`
 
-3.云编译的时候不能使用 `ssh` ，会导致编译失败！！！
+3.云编译的时候不能使用ssh，会导致编译失败！！！
 
 # [小米ax3000t解锁ssh以及刷入教程](https://github.com/zc360/Xiaomi-ax3000t-openwrt/blob/main/Flash-document.md)
 
